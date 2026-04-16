@@ -1,0 +1,14 @@
+{
+  "name": "ms-blog-rss",
+  "version": "1.0.0",
+  "description": "RSS dashboard for Microsoft Tech Community blogs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "xml2js": "^0.6.2"
+  }
+}
