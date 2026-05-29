@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "COSMOS_ENDPOINT": "https://<your-account>.documents.azure.com:443/",
+    "COSMOS_KEY": "<your-primary-key>",
+    "COSMOS_DATABASE": "newsfeed",
+    "COSMOS_CONTAINER": "articles",
+    "RSS_SCHEDULE_CRON": "0 0 */10 * * *",
+    "RSS_FEEDS": "[{\"index\":0,\"category\":\"Foundry\",\"url\":\"https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/board?board.id=azure-ai-foundry-blog\"},{\"index\":1,\"category\":\"MS All\",\"url\":\"https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community?interaction.style=blog&feeds.replies=false\"}]"
+  }
+}

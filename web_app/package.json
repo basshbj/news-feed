@@ -1,14 +1,27 @@
 {
-  "name": "ms-blog-rss",
+  "name": "news-feed-web",
   "version": "1.0.0",
-  "description": "RSS dashboard for Microsoft Tech Community blogs",
+  "private": true,
+  "description": "Express API + React SPA for the news-feed app.",
   "main": "server.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "start": "node server.js",
-    "dev": "node --watch server.js"
+    "build": "npm --prefix client install && npm --prefix client run build",
+    "dev:server": "node --watch server.js",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "concurrently -k -n server,client -c blue,magenta \"npm:dev:server\" \"npm:dev:client\"",
+    "postinstall": "npm --prefix client install"
   },
   "dependencies": {
-    "express": "^4.21.0",
-    "xml2js": "^0.6.2"
+    "@azure/cosmos": "^4.1.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
   }
 }
